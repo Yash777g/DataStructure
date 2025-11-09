@@ -33,7 +33,7 @@ int myAtoi(string s) {
         }
 
         ans = ans * 10 + digit;
-        i++;
+        index++;
     }
 
     return ans * sign;
