@@ -12,7 +12,7 @@ int threeSumClosest(vector<int>& nums, int target) {
     int result =
         nums[0] + nums[1] +
         nums[2]; // Initialize result to the sum of first three elements
-    int diff = abs(result - target);
+    int diff = abs(result - target);    
 
     for (int i = 0; i < nums.size() - 2; ++i) {
         int j = i + 1;
