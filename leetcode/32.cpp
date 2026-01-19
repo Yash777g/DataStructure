@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int longestValidParentheses(string s) {
+    if(s.empty()) return 0;
+    int maxlen = 0;
+    
+    stack<int> st;
+    st.push(-1);
+
+    for(int i = 0; i < s.size(); i++) {
+        if(s[i] == '(') st.push(i);
+        else {
+            st.pop();
+            if(st.empty()) st.push(i);
+            else {
+                maxlen = max(maxlen, i - st.top());
+            }
+        } 
+    }
+
+    return maxlen;
+}
+
+int main() {
+    string s = "(())";
+    cout << longestValidParentheses(s);
+    return 0;
+}
