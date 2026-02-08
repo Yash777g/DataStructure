@@ -35,7 +35,6 @@ string multiply(string num1, string num2) {
     return ans;
 }
 
-
 int main() {
     string num1 = "999", num2 = "99";
     cout << multiply(num1, num2); 
